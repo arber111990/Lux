@@ -20,9 +20,21 @@
   font-size: 15px;
   text-transform: uppercase;
 }
+
+.card-rating {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+}
+
+.card-location {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+}
 .card-description {
   position: absolute;
-  bottom: 10px;
+  bottom: 40px;
   left: 10px;
 }
 .card-description h2 {

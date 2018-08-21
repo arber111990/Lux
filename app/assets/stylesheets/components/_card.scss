@@ -6,6 +6,11 @@
   color: white;
   position: relative;
 }
+
+.card:hover {
+  background-color: black;
+  opacity: 0.8;
+}
 .card-user {
   position: absolute;
   right: 10px;

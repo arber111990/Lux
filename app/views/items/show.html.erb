@@ -1,3 +1,19 @@
-<%= link_to "Delete", item_path(@item),
+<%= @item.title %>
+<%= @item.description %>
+<% if @item.reviews %>
+  <% @item.reviews.each do |review| %>
+    <%= review.title %>
+    <%= review.description %>
+  <% end %>
+<% end %>
+<% if @item.bookings %>
+  <% @item.bookings.each do |booking|%>
+    <%= booking.start_date %>
+    <%= booking.end_date %>
+  <% end %>
+<% end %>
+<%= link_to "Make a Booking", new_item_booking_path(@item) %>
+<%= link_to "Write a Review", new_item_review_path(@item)%>
+<%= link_to "Delete Item", item_path(@item),
         method: :delete,
         data: { confirm: "are you sure?"} %>

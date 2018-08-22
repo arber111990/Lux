@@ -1,0 +1,7 @@
+<%= simple_form_for @item do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :price, as: :integer %>
+  <%= f.input :location %>
+  <%= f.button :submit %>
+<% end %>

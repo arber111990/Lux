@@ -28,17 +28,20 @@
 }
 
 .banner-btn {
-  text-decoration: none;
   background-color: transparent;
-  border: 2px solid white;
+  padding: 16px;
+  border: 3px bold white;
+}
+.banner-btn:hover {
+  background-color: #2E2E2E;
+  opacity: 0.85;
+}
+.banner-btn a {
+  color: white;
+  text-decoration: none;
 }
 
-.banner-btn:hover {
-  opacity: 1;
-  background-color: #2E2E2E !important;
-  color: white !important;
-  border: 2px solid white;
-}
+
 
 
 .form-control {

@@ -1,3 +1,24 @@
 .show-links a {
   color: black;
 }
+
+.show-title {
+  margin-left: 56px;
+}
+
+.show-container {
+  margin-left: 64px;
+  margin-right: 64px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+}
+
+.show-rating-booking {
+  display: flex;
+  justify-content: center;
+  h5 {
+    padding: 16px;
+  }
+}

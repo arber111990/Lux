@@ -1,4 +1,6 @@
 <% @items.each do |item| %>
-  <%= item %>
+  <%= link_to item.title, item_path(item)  %>
+  <%= link_to "Book", new_item_booking_path(item) %>
+  <%= link_to "Review", new_item_review_path(item)%>
 <% end %>
 <%= javascript_pack_tag "map" %>

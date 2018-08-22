@@ -13,8 +13,11 @@ class ItemsController < ApplicationController
     item_params[:price] = item_params[:price].to_i
     @item = Item.new(item_params)
     @item.user_id = @user.id
-    @item.save
-    redirect_to item_path(@item)
+    if @item.save
+      redirect_to item_path(@item)
+    else
+      render :new
+    end
   end
 
   def show

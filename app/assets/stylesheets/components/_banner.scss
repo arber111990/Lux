@@ -1,7 +1,7 @@
 .banner {
   color: white;
   text-align: center;
-  height: 60vh;
+  height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   position: relative;
@@ -13,8 +13,11 @@
 }
 .banner h1 {
   font-size: 50px;
-  font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.banner h4 {
+  padding-bottom: 10px;
 }
 .banner p {
   font-size: 25px;
@@ -23,6 +26,20 @@
   opacity: 0.6;
   margin-bottom: 30px;
 }
+
+.banner-btn {
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.banner-btn:hover {
+  opacity: 1;
+  background-color: #2E2E2E !important;
+  color: white !important;
+  border: 2px solid white;
+}
+
 
 .form-control {
   width: 200px !important;

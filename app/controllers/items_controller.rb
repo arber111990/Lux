@@ -8,6 +8,10 @@ class ItemsController < ApplicationController
     end
   end
 
+  def altphoto
+    "http://res.cloudinary.com/dbhqpuig0/image/upload/v1535041674/xgqq2az3wx08yu4zdva0.png"
+  end
+
   def new
     @item = Item.new
     @user = current_user

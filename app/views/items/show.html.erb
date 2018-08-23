@@ -1,4 +1,4 @@
-<div class="banner banner-show" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'banner-image.jpg'%>);">
+<div class="banner banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @item.photo %>')";>
 </div>
 
 <div class="show-title">
@@ -9,7 +9,7 @@
     <p><%= @item.description %></p>
   </div>
   <div class="show-rating-booking">
-    <%(1 * @item.rating).times do |star| %>
+    <%(@item.rating).times do |star| %>
     <h5 class="fas fa-star"> <% star %> </h5>
     <% end %>
     <button type="submit" class="show-btn"><%= link_to "Make a Booking", new_item_booking_path(@item) %></button>

@@ -1,8 +1,6 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
+  <h4><%= link_to "The Luxury Leasing Co.", root_path%></h4>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -10,14 +8,17 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-
+      <h5><%= link_to "Add a listing", new_item_path, class: "navbar-wagon-item navbar-wagon-link" %></h5>
+      <h5><%= link_to "Profile", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
+      <h5>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+        <%= t(".sign_out", default: "Sign Out") %>
+        <% end %>
+      </h5>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "christian-avatar.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
@@ -54,5 +55,6 @@
       </ul>
     </div>
   </div>
+</div>
 </div>
 

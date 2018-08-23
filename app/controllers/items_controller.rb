@@ -1,6 +1,11 @@
 class ItemsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @items = Item.all
+    if params[:query].present?
+      @items = Item.where("title ILIKE ?", "%#{params[:query]}%")
+    else
+      @items = Item.all
+    end
   end
 
   def new
@@ -39,7 +44,6 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:title, :description, :price, :location)
-
+    params.require(:item).permit(:title, :description, :price, :location, :photo)
   end
 end

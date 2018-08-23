@@ -5,7 +5,6 @@
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   position: relative;
-  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,4 +42,11 @@
   padding: 10px !important;
 }
 
+.banner-login {
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  margin-top: -70px;
+}
 

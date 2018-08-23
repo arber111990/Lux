@@ -18,9 +18,11 @@ ActiveRecord::Schema.define(version: 2018_08_23_102035) do
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "item_id"
+    t.integer "days"
     t.string "start_date"
     t.string "end_date"
     t.string "number_of_people"
+    t.boolean "confirmed"
     t.integer "price"
     t.string "expired"
     t.datetime "created_at", null: false
@@ -32,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_08_23_102035) do
   create_table "items", force: :cascade do |t|
     t.bigint "user_id"
     t.integer "price"
+    t.string "image_url"
     t.string "title"
     t.string "description"
     t.integer "rating"

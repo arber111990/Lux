@@ -27,3 +27,12 @@
   color: white;
   text-decoration: none;
 }
+
+.form-button {
+  padding: 16px;
+  width: 200px;
+  border: 1px bold #2E2E2E;
+  &:hover {
+    opacity: 0.7;
+  }
+}

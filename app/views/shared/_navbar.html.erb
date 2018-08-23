@@ -11,7 +11,7 @@
       <h5><%= link_to "Add a listing", new_item_path, class: "navbar-wagon-item navbar-wagon-link" %></h5>
       <h5><%= link_to "Profile", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
       <h5>
-        <%= link_to destroy_user_session_path, method: :delete do %>
+        <%= link_to destroy_user_session_path, class: "navbar-wagon-item navbar-wagon-link", method: :delete do %>
         <%= t(".sign_out", default: "Sign Out") %>
         <% end %>
       </h5>

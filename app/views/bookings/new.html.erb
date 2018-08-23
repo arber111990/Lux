@@ -1,0 +1,7 @@
+<%= simple_form_for [@item, @booking] do |f| %>
+  <%= f.input :number_of_people %>
+  <%= f.input :price, as: :integer %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.button :submit %>
+<% end %>

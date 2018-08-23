@@ -1,0 +1,4 @@
+<%= @review %>
+<%= link_to "Delete", item_review_path([@item, @review]),
+        method: :delete,
+        data: { confirm: "are you sure?"} %>

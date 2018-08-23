@@ -1,7 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'banner-image.jpg'%>);">
   <div class="banner-content">
-    <h1>LuxLeaz</h1>
-        <form class="form-inline">
+    <h1>The Luxury Leasing Co.</h1>
+    <h4>Rent Luxury sports cars, jets, Yachts and more... </h4>
+    <button type="submit" class="banner-btn"><%= link_to "Luxury items", items_path %></button>
+    <button type="submit" class="banner-btn"><%= link_to "Host an item", new_item_path %></button>
+  </div>
+</div>
+
+
+        <!-- <form class="form-inline">
           <label class="sr-only" for="inlineFormInput">Where</label>
           <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Where">
 
@@ -21,36 +28,4 @@
           <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Vehicle">
 
           <button type="submit" class="btn btn-danger mb-2">Submit</button>
-        </form>
-
-  </div>
-</div>
-
-<div class="home-wrapper">
-</div>
-
-<div class="container">
-  <div class="row">
-    <!-- Iterate over each luxury item -->
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('https://source.unsplash.com/360x175?cocktail');">
-        <div class="card-category">
-          <!-- Item.title -->
-          <h3> A Luxury item</h3>
-        </div>
-        <div class="card-description">
-          <!-- Item.description -->
-          <h5> A luxury description</h5>
-        </div>
-        <div class="card-rating">
-          <!-- Item.rating -->
-          <p><i class="far fa-star"></i></p>
-        </div>
-        <div class="card-location">
-          <!-- Item.location -->
-          <p><i class="fas fa-map-marker"></i></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </form> -->

@@ -1,8 +1,6 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
+  <h4><%= link_to "The Luxury Leasing Co.", root_path%></h4>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -10,10 +8,10 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-
+      <h5><%= link_to "Add a listing", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
+      <h5><%= link_to "About", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
+      <h5><%= link_to "Sign In", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
+      <h5><%= link_to "Sign Up", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
@@ -54,5 +52,6 @@
       </ul>
     </div>
   </div>
+</div>
 </div>
 

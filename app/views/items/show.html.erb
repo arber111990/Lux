@@ -1,0 +1,43 @@
+<div class="banner banner-show" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'banner-image.jpg'%>);">
+</div>
+
+<div class="show-title">
+  <h1><%= @item.title %></h1>
+</div>
+<div class="show-container">
+  <div class="show-content">
+    <p><%= @item.description %></p>
+  </div>
+  <div class="show-rating-booking">
+    <%(1 * @item.rating).times do |star| %>
+    <h5 class="fas fa-star"> <% star %> </h5>
+    <% end %>
+    <button type="submit" class="show-btn"><%= link_to "Make a Booking", new_item_booking_path(@item) %></button>
+  </div>
+</div>
+
+
+  <div class="show-reviews"><
+    <% if @item.reviews %>
+      <% @item.reviews.each do |review| %>
+        <h4><%= review.title %></h4>
+        <p><%= review.description %></p>
+      <% end %>
+    <% end %>
+  </div>
+
+<div class="show-bookings">
+  <% if @item.bookings %>
+    <% @item.bookings.each do |booking|%>
+      <h5><%= booking.start_date %></h5>
+      <h5><%= booking.end_date %></h5>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="show-links">
+  <%= link_to "Write a Review", new_item_review_path(@item)%>
+  <%= link_to "Delete Item", item_path(@item),
+          method: :delete,
+          data: { confirm: "are you sure?"} %>
+</div>

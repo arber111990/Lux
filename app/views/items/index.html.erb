@@ -1,3 +1,5 @@
+<div id="map"></div>
+
 <% @items.each do |item| %>
 <div class="container">
   <div class="row">
@@ -26,4 +28,5 @@
   </div>
 </div>
 <% end %>
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCzER7O10ZOUp7FloJzMe2r8X1GIQhgt7Q&callback=initMap" %>
 <%= javascript_pack_tag "map" %>

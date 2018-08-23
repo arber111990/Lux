@@ -3,16 +3,22 @@
 }
 
 .show-title {
-  margin-left: 56px;
+  margin-left: 50px;
 }
 
 .show-container {
-  margin-left: 64px;
-  margin-right: 64px;
+  // margin-left: 64px;
+  // margin-right: 64px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 200px;
+  // justify-content: space-around;
+  // align-items: center;
+  // height: 200px;
+}
+
+.show-content {
+  padding: 0px 50px 0px 50px;
+  flex: 0 0 60%;
+  // margin-right: 30px;
 }
 
 .show-rating-booking {
@@ -21,4 +27,57 @@
   h5 {
     padding: 16px;
   }
+}
+
+.show-booking-title  {
+  text-align: center;
+}
+
+#booking_number_of_people {
+  width: 100% !important;
+}
+
+#booking_start_date {
+  width: 100% !important;
+}
+
+#booking_end_date {
+  width: 100% !important;
+}
+
+
+.show-booking-form {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.show-reviews {
+  margin-left: 80px;
+  margin-bottom: 50px;
+  p {
+    margin-bottom: 30px;
+    margin-left: 60px;
+    color: rgba(60,60,60,0.6)
+    }
+}
+
+.review_avatar {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.review_item {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.show-links {
+  margin-left: 80px;
+}
+
+.arber {
+ margin-left: 15px;
 }

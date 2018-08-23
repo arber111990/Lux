@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_08_23_102035) do
     t.string "start_date"
     t.string "end_date"
     t.string "number_of_people"
+    t.boolean "confirmed"
     t.integer "price"
     t.string "expired"
     t.datetime "created_at", null: false

@@ -1,4 +1,12 @@
-<div id="map"></div>
+<!-- <div id="map"></div> -->
+
+<%= form_tag items_path, method: :get do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control",
+  placeholder: "Find an item"
+  %>
+<% end %>
 
 <% @items.each do |item| %>
 <div class="container">

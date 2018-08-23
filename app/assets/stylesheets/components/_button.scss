@@ -1,0 +1,29 @@
+.banner-btn {
+  background-color: transparent;
+  padding: 16px;
+  border: 3px bold white;
+}
+.banner-btn:hover {
+  background-color: #2E2E2E;
+  opacity: 0.85;
+}
+.banner-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.show-btn {
+  background-color: #2E2E2E;
+  padding: 16px;
+  border: 3px bold white;
+  opacity: 0.85;
+}
+
+.show-btn:hover {
+  opacity: 0.3
+}
+
+.show-btn a {
+  color: white;
+  text-decoration: none;
+}

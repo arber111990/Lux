@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
 User.destroy_all
 Item.destroy_all
 Review.destroy_all
@@ -25,3 +27,18 @@ chris_item.save!
 filip_item = Item.new(user_id: nick.id, title: "Filip's fashy Ford Fiesta",location: "Romania", description: "Christian does some very un-christian things...", price: 50, rating: 4)
 filip_item.save!
 Review.new(user_id: chris.id, item_id: nick_item.id, title: "The greatest dissapointment since Alex Haumer left",description: "Nick promised a yacht, it was actually a dinghy! What a sneaky guy!", rating: 1).save!
+
+
+puts 'Creating 10 fake restaurants...'
+10.times do
+  item = Item.new(
+    user_id: nick.id,
+    title: "#{Faker::Vehicle.manufacture}",
+    location: "#{Faker::Address.city}",
+    description: "#{Faker::Vehicle.car_options}, #{Faker::Vehicle.standard_specs}",
+    price: rand(1000..2500),
+    rating:  rand(0..5)
+  )
+  item.save!
+end
+puts 'Finished!'

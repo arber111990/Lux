@@ -27,10 +27,8 @@
   text-transform: uppercase;
 }
 
-.card-rating {
-  position: absolute;
-  bottom: 8px;
-  left: 10px;
+.card-stars {
+
 }
 
 .card-location {
@@ -39,10 +37,9 @@
   right: 10px;
 }
 .card-description {
-  position: absolute;
-  bottom: 40px;
-  left: 10px;
+
 }
+
 .card-description h2 {
   font-size: 24px;
 }
@@ -65,3 +62,14 @@
   opacity: 0.1;
 }
 
+.card-t-s {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -27,6 +27,7 @@ puts 'Creating 10 fake restaurants...'
     location: "#{Faker::Address.city}",
     description: "#{Faker::Vehicle.car_options}, #{Faker::Vehicle.standard_specs}",
     price: rand(1000..2500),
+    photo: "https://images.unsplash.com/photo-1532054042869-c409cdfd5d3c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=015f7a3032ecf11eb2b6d6f70a8d164d&auto=format&fit=crop&w=1050&q=80",
     rating:  rand(0..5)
   )
   item.save!

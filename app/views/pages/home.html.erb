@@ -1,9 +1,27 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'banner-image.jpg'%>);">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 50%), url(<%= image_path 'https://images.unsplash.com/photo-1472759153518-0d0c1e11f854?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3cc98903ecd7f76b22460ea69538cd7e&auto=format&fit=crop&w=1050&q=80'%>);">
   <div class="banner-content">
     <h1>The Luxury Leasing Co.</h1>
     <h4>Rent Luxury sports cars, jets, Yachts and more... </h4>
-    <button type="submit" class="banner-btn"><%= link_to "Luxury items", items_path %></button>
-    <button type="submit" class="banner-btn"><%= link_to "Host an item", new_item_path %></button>
+    <button type="submit" class="banner-btn" id="item-search"><%= link_to "Luxury items", items_path %></button>
+    <button type="submit" class="banner-btn" id="item-list"><%= link_to "Host an item", new_item_path %></button>
+
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+      <span class="close">&times;</span>
+      <%= form_for(:user, :url => session_path(:user)) do |f| %>
+        <div class="email-container">
+          <%= f.text_field :email, :class =>"form-control",placeholder: "Email", value:"" %>
+        </div>
+        <div class="password-container">
+          <%= f.password_field :password,:label =>"Password", :class =>"form-control", placeholder:"Password", value:""%>
+        </div>
+        <%= f.submit 'Login', :class =>"form-control modal-form" %>
+        <%= f.check_box :remember_me, label: "Remember me", value: "true" %>
+        <%= f.label :remember_me %>
+       <% end %>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -29,3 +47,5 @@
 
           <button type="submit" class="btn btn-danger mb-2">Submit</button>
         </form> -->
+
+

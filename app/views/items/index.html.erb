@@ -1,32 +1,52 @@
-<div id="map"></div>
+<!-- <div id="map"></div> -->
 
-<% @items.each do |item| %>
-<div class="container">
-  <div class="row">
-    <!-- Iterate over each luxury item -->
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('https://source.unsplash.com/360x175?cocktail');">
-        <div class="card-category">
-          <!-- Item.title -->
-          <h3> <%= link_to item.title, item_path(item)  %></h3>
-        </div>
-        <div class="card-description">
-          <!-- Item.description -->
-          <h5> <%= link_to "Book", new_item_booking_path(item) %></h5>
-        </div>
-        <div class="card-rating">
-          <!-- Item.rating -->
-          <!-- <p><i class="far fa-star"></i></p> -->
-          <p><%= link_to "Review", new_item_review_path(item)%></p>
-        </div>
-        <div class="card-location">
-          <!-- Item.location -->
-          <p><i class="fas fa-map-marker"></i></p>
-        </div>
-      </div>
-    </div>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%), url('https://images.unsplash.com/photo-1532054042869-c409cdfd5d3c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=015f7a3032ecf11eb2b6d6f70a8d164d&auto=format&fit=crop&w=1050&q=80');">
+  <div class="banner-content">
+    <h1>Explore our select offerings below</h1>
+    <p>Learn to code with us in Berlin</p>
+    <a class="btn btn-primary btn-lg">Start now</a>
   </div>
 </div>
+
+<div>
+<%= form_tag items_path, method: :get do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control",
+  placeholder: "Find an item"
+  %>
 <% end %>
-<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCzER7O10ZOUp7FloJzMe2r8X1GIQhgt7Q&callback=initMap" %>
-<%= javascript_pack_tag "map" %>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <% @items.each do |item| %>
+      <!-- Iterate over each luxury item -->
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('https://source.unsplash.com/360x175?cocktail');">
+          <div class="card-category">
+            <!-- Item.title -->
+            <h3> <%= link_to item.title, item_path(item)  %></h3>
+          </div>
+          <div class="card-description">
+            <!-- Item.description -->
+            <h5> <%= link_to "Book", new_item_booking_path(item) %></h5>
+          </div>
+          <div class="card-rating">
+            <!-- Item.rating -->
+            <!-- <p><i class="far fa-star"></i></p> -->
+            <p><%= link_to "Review", new_item_review_path(item)%></p>
+          </div>
+          <div class="card-location">
+            <!-- Item.location -->
+            <p><i class="fas fa-map-marker"></i></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCzER7O10ZOUp7FloJzMe2r8X1GIQhgt7Q&callback=initMap" %>
+<%= javascript_pack_tag "map" %> -->

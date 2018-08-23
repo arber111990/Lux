@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = @user.id
     @booking.item_id = @item.id
+    @booking.price = @item.price * @booking.days
     @booking.save
     redirect_to item_path(@item)
   end

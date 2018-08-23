@@ -8,14 +8,17 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <h5><%= link_to "Add a listing", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
-      <h5><%= link_to "About", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
-      <h5><%= link_to "Sign In", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
-      <h5><%= link_to "Sign Up", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
+      <h5><%= link_to "Add a listing", new_item_path, class: "navbar-wagon-item navbar-wagon-link" %></h5>
+      <h5><%= link_to "Profile", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
+      <h5>
+        <%= link_to destroy_user_session_path, class: "navbar-wagon-item navbar-wagon-link", method: :delete do %>
+        <%= t(".sign_out", default: "Sign Out") %>
+        <% end %>
+      </h5>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "christian-avatar.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>

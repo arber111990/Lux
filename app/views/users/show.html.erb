@@ -1,0 +1,10 @@
+<% @user.items.each do |item| %>
+  <%= item.title %>
+  <% item.bookings.each do |booking| %>
+    <%= booking.start_date %>
+    <%= booking.end_date %>
+    <% if @user.id == current_user.id %>
+      <h1>buttons here</h1>
+    <% end %>
+  <% end %>
+<% end %>

@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
-  padding: 0px 50px;
+  height: 50px;
+  padding: 0px 44px;
   color: #f2f2f2;
 }
 .footer-links {
@@ -21,4 +21,13 @@
 .footer-links a:hover {
   opacity: 1;
 }
+
+.footer-copyright p {
+  padding-top: 8px;
+  opacity: 0.15;
+  &:hover {
+    opacity: 1;
+  }
+}
+
 

@@ -7,7 +7,7 @@
   h1 {
     margin-top: 0;
   }
-
+  margin-right: 12px;
   margin-bottom: 50px;
 }
 
@@ -36,6 +36,10 @@
 
 .show-booking-title  {
   text-align: center;
+}
+
+.input-active:active {
+  background-color: white;
 }
 
 .show-booking {
@@ -67,7 +71,7 @@
   p {
     margin-bottom: 30px;
     margin-left: 60px;
-    color: rgba(60,60,60,0.6)
+    color: #444444;
     }
 }
 
@@ -81,11 +85,16 @@
 .review_item {
   display: flex;
   flex-direction: row;
-
 }
 
+.review-content{
+  background-color: #e5e5e5;
+  margin: 8px 24px;
+  padding: 16px;
+}
 .show-links {
   margin-left: 80px;
+  margin-bottom: 100px;
 }
 
 .arber {

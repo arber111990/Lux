@@ -1,134 +1,56 @@
 <div class="banner banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @item.profile %>');">
 </div>
 <div class="container">
+  <div class="show-box">
+    <div class="show-left">
+      <div class="show-title">
+        <h1> <%= @item.title %> </h1>
+        <h5>  City: London </h5>
 
-  <!-- <div class="show-title">
-    <h1><%#= @item.title %></h1>
-    <h5> City: London </h5>
-  </div>
-
-
-  <div class="show-container">
-    <div>
-      <div class="show-content">
-        <p><%#= @item.description %></p>
+        <p><%= @item.description %></p>
       </div>
+
       <div class="show-reviews">
-        <%# if @item.reviews %>
-          <%# @item.reviews.each do |review| %>
+        <h3> Reviews </h3>
+        <% if @item.reviews %>
+          <% @item.reviews.each do |review| %>
             <div class="review_item">
-            <img src="http://kitt.lewagon.com/placeholder/users/ssaunier" alt="img" class="review_avatar">
-            <h4><%#= review.title %></h4>
+              <img src="http://kitt.lewagon.com/placeholder/users/ssaunier" alt="img" class="review_avatar">
+              <h4><%= review.title %></h4>
             </div>
-            <p><%#= review.description %></p>
-          <%# end %>
-        <%# end %>
+            <div class="review-content">
+              <p><%= review.description %></p>
+            </div>
+          <% end %>
+        <% end %>
       </div>
-    </div> -->
-  <!--   <div class="show-rating-booking">
-      <%#(1 * @item.rating).times do |star| %>
-      <h5 class="fas fa-star"> <%# star %> </h5>
-      <%# end %>
-      <button type="submit" class="show-btn"><%#= link_to "Make a Booking", new_item_booking_path(@item) %></button>
-    </div> -->
+        <div class="show-links">
+          <%= link_to "Write a Review", new_item_review_path(@item), :class => "item-show-button"%>
+        </div>
+    </div>
+    <div class="show-right">
+      <div class="show-booking">
+        <div class="show-booking-form">
+          <div class="row">
+            <h2 class="show-booking-title">$<%= @item.price %> per day</h2>
+            <%= simple_form_for([@item, @booking])  do |f| %>
+              <div class="col-xs-6 input-active">
+                <%= f.input :start_date, required: false %>
+              </div>
 
-      <div class="show-box">
-        <div class="show-left">
-          <div class="show-title">
-            <h1> <%= @item.title %> </h1>
-            <h5>  City: London </h5>
-
-            <p><%= @item.description %></p>
-          </div>
-
-          <div class="show-reviews">
-            <h5> Reviews </h5>
-            <% if @item.reviews %>
-              <% @item.reviews.each do |review| %>
-                <div class="review_item">
-                <img src="http://kitt.lewagon.com/placeholder/users/ssaunier" alt="img" class="review_avatar">
-                <h4><%= review.title %></h4>
-                </div>
-                <p><%= review.description %></p>
-              <% end %>
+              <div class="col-xs-6 input-active">
+                <%= f.input :end_date, required: false %>
+              </div>
+              <div class="col-xs-12 input-active">
+                <%= f.input :days, required: false, :collection => (1..10).to_a,  placeholder: "Number of days", html: { class: "show-booking-inline" } %>
+              </div>
+              <%= f.button :submit, :class => "item-show-button" %>
             <% end %>
           </div>
         </div>
-
-
-
-        <div class="show-right">
-          <div class="show-booking">
-            <div class="show-booking-form">
-              <div class="row">
-                <h2 class="show-booking-title">$<%= @item.price %> per day</h2>
-                <%= simple_form_for([@item, @booking])  do |f| %>
-                  <div class="col-xs-6">
-                    <%= f.input :start_date %>
-                  </div>
-
-                  <div class="col-xs-6">
-                    <%= f.input :end_date %>
-                  </div>
-                  <div class="col-xs-12">
-                    <%= f.input :days, :collection => (1..10).to_a,  placeholder: "Number of days", html: { class: "show-booking-inline" } %>
-                  </div>
-                  <%= f.button :submit, :class => "arber btn btn-danger" %>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-    <!-- </div> -->
-     <!--    </div>
       </div>
- -->
+    </div>
+  </div>
 
-
-
-    <!-- <div class="show-booking">
-      <div class="show-booking-form">
-          <div class="row">
-            <h2 class="show-booking-title">$<%= @item.price %> per day</h2>
-            <%#= simple_form_for([@item, @booking])  do |f| %>
-              <div class="col-xs-6">
-                <%# f.input :start_date %>
-              </div>
-
-              <div class="col-xs-6">
-                <%# f.input :end_date %>
-              </div>
-              <div class="col-xs-12">
-                <%# f.input :days, :collection => (1..10).to_a,  placeholder: "Number of days", html: { class: "show-booking-inline" } %>
-              </div>
-              <%# f.button :submit, :class => "arber btn btn-danger" %>
-            <%# end %>
-          </div>
-        </div>
-      </div> -->
-    <!-- </div> -->
 </div>
 
-
-
-<!--   <div class="show-bookings">
-    <%# if @item.bookings %>
-      <%# @item.bookings.each do |booking|%>
-        <h5><%#= booking.start_date %></h5>
-        <h5><%#= booking.end_date %></h5>
-      <%# end %>
-    <%# end %>
-  </div> -->
-
-  <div class="show-links">
-    <%= link_to "Write a Review", new_item_review_path(@item), :class => "btn btn-primary"%>
-    <%= link_to "Delete Item", item_path(@item),
-            method: :delete,
-            data: { confirm: "are you sure?"},
-            :class => "btn btn-danger"
-            %>
-  </div>
-<!-- </div> -->

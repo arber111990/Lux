@@ -1,12 +1,16 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <%= simple_form_for [@item, @review] do |f| %>
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :rating, as: :integer %>
-        <%= f.button :submit %>
-      <% end %>
+<div class="container-size">
+  <div class="banner-login" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 50%), url(<%= image_path 'jacob-stone-560917-unsplash'%>);">
+
+    <div class="login-container">
+      <div class="form-inputs">
+        <h2>Write a Review</h2>
+        <%= simple_form_for [@item, @review] do |f| %>
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :rating, as: :integer %>
+          <%= f.button :submit, class: 'form-button' %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

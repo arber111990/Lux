@@ -34,7 +34,7 @@
             <div class="card-t-s">
               <div class="card-title">
                 <!-- Item.title -->
-                <p><%= item.title %></p>
+                <p><%= link_to item.title, item_path(item.id) %></p>
               </div>
               <div class="card-stars">
                 <!-- Item.rating -->

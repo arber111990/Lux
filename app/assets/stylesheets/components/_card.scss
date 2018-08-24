@@ -37,8 +37,10 @@
   right: 10px;
 }
 .card-description {
-  padding-left: 10px;
-
+padding-left: 10px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 .card-description h2 {

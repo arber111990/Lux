@@ -31,29 +31,30 @@
       <!-- Iterate over each luxury item -->
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="card">
-          <div class="card-image" style="height: 100px; width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<% item.photo %>);">
+          <div class="card-image" style="height: 100px; width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path item.profile %>');">
           </div>
 
           <div class="card-footer">
             <div class="card-t-s">
               <div class="card-title">
                 <!-- Item.title -->
-                <p>title</p>
+                <p><%= item.title %></p>
               </div>
               <div class="card-stars">
                 <!-- Item.rating -->
-                <!-- <p><i class="far fa-star"></i></p> -->
-                <p>STARS</p>
+                <p>
+                  <% item.rating.times do %>
+                    <i class="far fa-star"></i>
+                  <% end %>
+                </p>
               </div>
             </div>
-
             <div class="card-description">
               <!-- Item.description -->
-              <h5>item.description</h5>
+              <h5><%= item.description %></h5>
             </div>
 
           </div>
-
         </div>
       </div>
     <% end %>

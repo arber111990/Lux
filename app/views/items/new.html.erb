@@ -1,15 +1,15 @@
 
 <div class="container-size">
-  <div class="banner-login" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 50%), url(<%= image_path 'https://images.unsplash.com/photo-1472759153518-0d0c1e11f854?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3cc98903ecd7f76b22460ea69538cd7e&auto=format&fit=crop&w=1050&q=80'%>);">
+  <div class="banner-login" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 50%), url(<%= image_path 'jacob-stone-560917-unsplash'%>);">
 
     <div class="login-container">
       <div class="form-inputs">
         <h2>List Item</h2>
         <%= simple_form_for @item do |f| %>
-          <%= f.input :title %>
-          <%= f.input :description %>
-          <%= f.input :price, as: :integer %>
-          <%= f.input :location %>
+          <%= f.input :title, required: false %>
+          <%= f.input :description, required: false %>
+          <%= f.input :price, as: :integer, required: false %>
+          <%= f.input :location, required: false %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>
           <%= f.button :submit, class: 'form-button' %>

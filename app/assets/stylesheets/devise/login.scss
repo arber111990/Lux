@@ -1,16 +1,17 @@
 .login-container{
-  padding: 100px;
+  padding-top: 100px;
   display: flex;
   justify-content: center;
   margin-left: 200px;
   margin-right: 200px;
   color: white;
   letter-spacing: 0.7px;
-  font-weight: lighter;
 }
 
-.login-container a{
+.login-container a {
   color: white;
+  font-size: 16px;
+  font-weight: lighter !important;
 }
 
 .form-inputs {
@@ -18,6 +19,11 @@
   border: 1px solid #2c2c2c;
   background-color: #2E2E2E;
   opacity: 0.9;
+
+  label {
+    font-weight: lighter !important;
+    font-size: 16px;
+  }
 }
 
 .form-check-label {

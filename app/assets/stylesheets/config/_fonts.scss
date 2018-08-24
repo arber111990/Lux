@@ -1,9 +1,10 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Marcellus+SC|Dosis:300,400,500");
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Lora');
 
 // Define fonts for body and headers
-$body-font: 'Dosis', 'sans-serif';
-$headers-font: "Marcellus SC", "serif";
+$body-font: 'Lora', 'serif';
+$headers-font: 'Cinzel', 'serif';
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

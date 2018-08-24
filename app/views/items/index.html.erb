@@ -4,6 +4,9 @@
   <div class="banner-content">
     <h1>Explore our select offerings below</h1>
     <p>Learn to code with us in Berlin</p>
+
+
+
     <!-- <a class="btn btn-primary btn-lg">Start now</a> -->
     <div class="srch-form">
       <%= form_tag items_path, method: :get do %>
@@ -13,6 +16,7 @@
       placeholder: "Search item..."
       %>
       <% end %>
+      <i class="fas fa-search"></i>
     </div>
   </div>
 
@@ -34,7 +38,7 @@
             <div class="card-t-s">
               <div class="card-title">
                 <!-- Item.title -->
-                <p>item.title</p>
+                <p>title</p>
               </div>
               <div class="card-stars">
                 <!-- Item.rating -->
@@ -46,12 +50,12 @@
             <div class="card-description">
               <!-- Item.description -->
               <h5>item.description</h5>
-
             </div>
+
           </div>
 
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>

@@ -2,3 +2,7 @@
 .home-wrapper {
   height: 900px;
 }
+
+.min-height-content {
+  min-height: calc(100vh - 80px);
+}

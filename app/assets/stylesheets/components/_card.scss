@@ -28,7 +28,10 @@
 }
 
 .card-stars {
-  font-size: 14px
+  font-size: 14px;
+  position: absolute;
+  top: 4px;
+  right: 8px;
 
 }
 
@@ -42,6 +45,7 @@ padding-left: 8px;
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
+padding-right: 8px;
 }
 
 .card-description p {

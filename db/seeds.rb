@@ -9,7 +9,12 @@ require 'faker'
 
 vehicles = ["yacht", "boat", "ferrari", "porsche", "rolex", "speedboat"]
 adjectives = ["Wicked", "Awesome", "Crap", "Mediocre", "Completley crap", "Makeshift"]
-
+images = { "yacht" => "https://www.heesenyachts.com/app/uploads/2017/09/83m-Steel-exterior-6.jpg?x38579",
+"boat" => "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Motorboat_at_Kankaria_lake.JPG/1280px-Motorboat_at_Kankaria_lake.JPG",
+"ferrari" => "https://photos.motorcar.com/used-2013-ferrari-458_italia-2drconvertible-9871-17036078-1-640.jpg",
+"porsche" => "https://f7432d8eadcf865aa9d9-9c672a3a4ecaaacdf2fee3b3e6fd2716.ssl.cf3.rackcdn.com/C1201/U1442/IMG_7071-medium.jpg",
+"rolex" => "https://d1alt1wkdk73qo.cloudfront.net/images/guide/254052cb2530451da89cabd32ca4901f/640x478_ac.jpg",
+"speedboat" => "https://www.parksmarina.com/webres/Image/obw/page-top-images/rentals-boat-slips.jpg"}
 User.destroy_all
 Item.destroy_all
 Review.destroy_all
@@ -23,21 +28,23 @@ nick_item.save!
 
 puts 'Creating 10 fake restaurants...'
 10.times do
+  object = vehicles.sample
+  image = images[object]
   item = Item.new(
     user_id: nick.id,
-    title: adjectives.sample + " " + vehicles.sample,
+    title: adjectives.sample + " " + object,
     location: "#{Faker::Address.city}",
-    description: "#{Faker::Vehicle.car_options}, #{Faker::Vehicle.standard_specs}",
+    description: "This is a really great item. Trust me I am Nick Johnson and I never lie.",
     price: rand(1000..2500),
-    photo: "https://images.unsplash.com/photo-1532054042869-c409cdfd5d3c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=015f7a3032ecf11eb2b6d6f70a8d164d&auto=format&fit=crop&w=1050&q=80",
+    photo: image,
     rating:  rand(0..5)
   )
   item.save!
   review = Review.new(
     user_id: chris.id,
     item_id: item.id,
-    title: "This is great!",
-    description: "I had a great time with this!",
+    title: "This is Crap!",
+    description: "Nick Johnson is scum who deserves death.",
     rating: rand(1..5)
   )
 

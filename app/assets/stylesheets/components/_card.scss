@@ -1,5 +1,5 @@
 .card {
-  height: 175px;
+  height: 200px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
@@ -37,6 +37,7 @@
   right: 10px;
 }
 .card-description {
+padding-left: 10px;
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
@@ -68,6 +69,7 @@ text-overflow: ellipsis;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0px 10px 0px 10px
 }
 
 .card-title {

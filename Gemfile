@@ -19,6 +19,7 @@ gem 'webpacker'
 gem 'faker'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
+gem 'font-awesome-sass', '~> 5.0.9'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

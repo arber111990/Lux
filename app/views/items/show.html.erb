@@ -20,6 +20,11 @@
             </div>
             <div class="review-content">
               <p><%= review.description %></p>
+              <div class="stars">
+                <% (review.rating).times do |rating| %>
+                <i class="fas fa-star"><% rating  %></i>
+                <% end %>
+              </div>
             </div>
           <% end %>
         <% end %>

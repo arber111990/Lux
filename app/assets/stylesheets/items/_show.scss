@@ -38,8 +38,11 @@
   text-align: center;
 }
 
-.input-active:active {
+.input-active {
   background-color: white;
+  label {
+    font-weight: lighter !important;
+  }
 }
 
 .show-booking {

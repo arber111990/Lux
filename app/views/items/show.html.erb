@@ -1,4 +1,4 @@
-<div class="banner banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @item.profile %>');">
+<div class="banner banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<% @item.photo %>);">
 </div>
 <div class="container">
 
@@ -22,7 +22,7 @@
     <div class="show-booking">
       <div class="show-booking-form">
           <div class="row">
-            <h2 class="show-booking-title"> $10 per week </h2>
+            <h2 class="show-booking-title">$<%= @item.price %> per day</h2>
             <%= simple_form_for([@item, @booking])  do |f| %>
               <div class="col-xs-6">
                 <%= f.input :start_date %>
@@ -32,7 +32,7 @@
                 <%= f.input :end_date %>
               </div>
               <div class="col-xs-12">
-                <%= f.input :number_of_people, :collection => (1..12).to_a,  placeholder: "Number of people", html: { class: "show-booking-inline" } %>
+                <%= f.input :days, :collection => (1..10).to_a,  placeholder: "Number of days", html: { class: "show-booking-inline" } %>
               </div>
               <%= f.button :submit, :class => "arber btn btn-danger" %>
             <% end %>

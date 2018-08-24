@@ -6,7 +6,6 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.integer :days
       t.string :start_date
       t.string :end_date
-      t.string :number_of_people
       t.boolean :confirmed
       t.integer :price
       t.string :expired

@@ -9,7 +9,7 @@
 
       <!-- Links when logged in -->
       <h5><%= link_to "Add a listing", new_item_path, class: "navbar-wagon-item navbar-wagon-link" %></h5>
-      <h5><%= link_to "Profile", "#", class: "navbar-wagon-item navbar-wagon-link" %></h5>
+      <h5><%= link_to "Profile", user_path(current_user.id), class: "navbar-wagon-item navbar-wagon-link" %></h5>
       <h5>
         <%= link_to destroy_user_session_path, class: "navbar-wagon-item navbar-wagon-link", method: :delete do %>
         <%= t(".sign_out", default: "Sign Out") %>
@@ -41,6 +41,7 @@
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 

@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+vehicles = ["yacht", "boat", "ferrari", "porsche", "rolex", "speedboat"]
+adjectives = ["Wicked", "Awesome", "Crap", "Mediocre", "Completley crap", "Makeshift"]
 
 User.destroy_all
 Item.destroy_all
@@ -23,7 +25,7 @@ puts 'Creating 10 fake restaurants...'
 10.times do
   item = Item.new(
     user_id: nick.id,
-    title: "#{Faker::Vehicle.manufacture}",
+    title: adjectives.sample + " " + vehicles.sample,
     location: "#{Faker::Address.city}",
     description: "#{Faker::Vehicle.car_options}, #{Faker::Vehicle.standard_specs}",
     price: rand(1000..2500),
@@ -38,6 +40,7 @@ puts 'Creating 10 fake restaurants...'
     description: "I had a great time with this!",
     rating: rand(1..5)
   )
+
   review.save!
 end
 puts 'Finished!'

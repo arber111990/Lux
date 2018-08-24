@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
     @review.user = @user
     @review.item = @item
     @review.save
+    @item.rating = calculate_rating
     redirect_to item_path(@item)
   end
 
@@ -22,6 +23,16 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.delete
+  end
+
+  def calculate_rating
+    @rating = 0
+    @item = Item.find(params[:item_id])
+    @item.reviews.each do |review|
+      @rating += review.rating
+    end
+    @rating = @rating / @item.reviews.count
+    return @rating
   end
 
   def review_params

@@ -3,7 +3,12 @@
 }
 
 .show-title {
-  margin-left: 50px;
+  // margin-left: 50px;
+  h1 {
+    margin-top: 0;
+  }
+
+  margin-bottom: 50px;
 }
 
 .show-container {
@@ -33,6 +38,11 @@
   text-align: center;
 }
 
+.show-booking {
+  position: sticky;
+  top: 0;
+}
+
 #booking_number_of_people {
   width: 100% !important;
 }
@@ -52,7 +62,7 @@
 }
 
 .show-reviews {
-  margin-left: 80px;
+  // margin-left: 80px;
   margin-bottom: 50px;
   p {
     margin-bottom: 30px;
@@ -81,3 +91,20 @@
 .arber {
  margin-left: 15px;
 }
+
+.show-box {
+  display: flex;
+}
+
+.show-left {
+  flex: 1;
+}
+
+.show-right {
+  flex: 0 0 40%;
+}
+
+.show-box {
+  margin-top: 30px;
+}
+

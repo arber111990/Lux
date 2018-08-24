@@ -1,6 +1,12 @@
-<%= simple_form_for [@item, @review] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :rating, as: :integer %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= simple_form_for [@item, @review] do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :rating, as: :integer %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

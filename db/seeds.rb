@@ -9,12 +9,12 @@ require 'faker'
 
 vehicles = ["yacht", "boat", "ferrari", "porsche", "rolex", "speedboat"]
 adjectives = ["Wicked", "Awesome", "Crap", "Mediocre", "Completley crap", "Makeshift"]
-images = { "yacht" => "https://www.heesenyachts.com/app/uploads/2017/09/83m-Steel-exterior-6.jpg?x38579",
-"boat" => "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Motorboat_at_Kankaria_lake.JPG/1280px-Motorboat_at_Kankaria_lake.JPG",
-"ferrari" => "https://photos.motorcar.com/used-2013-ferrari-458_italia-2drconvertible-9871-17036078-1-640.jpg",
-"porsche" => "https://f7432d8eadcf865aa9d9-9c672a3a4ecaaacdf2fee3b3e6fd2716.ssl.cf3.rackcdn.com/C1201/U1442/IMG_7071-medium.jpg",
-"rolex" => "https://d1alt1wkdk73qo.cloudfront.net/images/guide/254052cb2530451da89cabd32ca4901f/640x478_ac.jpg",
-"speedboat" => "https://www.parksmarina.com/webres/Image/obw/page-top-images/rentals-boat-slips.jpg"}
+images = { "yacht" => "http://res.cloudinary.com/dodobzdpn/image/upload/v1535125168/npubdtjmgcfqom9lnlew.jpg",
+"boat" => "http://res.cloudinary.com/dodobzdpn/image/upload/v1535125350/gwrzgv41pqv5ylukhfx1.jpg",
+"ferrari" => "http://res.cloudinary.com/dodobzdpn/image/upload/v1535124967/j2kofj92sucl9ruilpw8.jpg",
+"porsche" => "http://res.cloudinary.com/dodobzdpn/image/upload/v1535125233/v2owzljembljz8nq7hlm.jpg",
+"rolex" => "http://res.cloudinary.com/dodobzdpn/image/upload/v1535125292/nr0qlmegy0hiswntmabv.jpg",
+"speedboat" => "http://res.cloudinary.com/dodobzdpn/image/upload/v1535125417/s951iebjbarewdaoi4pv.jpg" }
 User.destroy_all
 Item.destroy_all
 Review.destroy_all
@@ -36,9 +36,9 @@ puts 'Creating 10 fake restaurants...'
     location: "#{Faker::Address.city}",
     description: "This is a really great item. Trust me I am Nick Johnson and I never lie.",
     price: rand(1000..2500),
-    photo: image,
     rating:  rand(0..5)
   )
+  item.remote_photo_url = image
   item.save!
   review = Review.new(
     user_id: chris.id,

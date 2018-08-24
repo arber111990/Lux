@@ -23,7 +23,7 @@ chris = User.new(email: "ChristianBell@bell.com", password: "123123")
 chris.save
 nick = User.new(email: "Nick@bogdanoff.com", password: "dompeet")
 nick.save
-nick_item = Item.new(user_id: nick.id, title: "Nicks Naughty Yacht", location: "Nicks oudoor swimming pool", description: "sThis is a naughty yacht. Some claim it is not a yacht at all, but a dinghy. Those people are incorrect.", price: 1000, rating: 1)
+nick_item = Item.new(user_id: nick.id, title: "Nicks Naughty Yacht", location: "Nicks oudoor swimming pool", description: "This is a naughty yacht. Some claim it is not a yacht at all, but a dinghy. Those people are incorrect.", price: 1000, rating: 1)
 nick_item.save!
 
 puts 'Creating 10 fake restaurants...'

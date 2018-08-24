@@ -48,6 +48,12 @@
             <% end %>
           </div>
         </div>
+        <div class="show-booking-form">
+          <% @item.bookings.each do |booking|%>
+            <h2>Your Booking</h2>
+            <p>From: <%=  booking.start_date%>, to: <%=  booking.end_date%></p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

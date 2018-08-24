@@ -43,8 +43,12 @@
               <div class="card-stars">
                 <!-- Item.rating -->
                 <p>
-                  <% item.rating.times do %>
-                    <i class="far fa-star"></i>
+                  <% if item.rating == 0 %>
+                    <p>No reviews</p>
+                  <% else %>
+                    <% item.rating.times do %>
+                      <i class="far fa-star"></i>
+                    <% end %>
                   <% end %>
                 </p>
               </div>

@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2018_08_23_102035) do
   create_table "items", force: :cascade do |t|
     t.bigint "user_id"
     t.integer "price"
-    t.string "image_url"
     t.string "title"
     t.string "description"
     t.integer "rating"

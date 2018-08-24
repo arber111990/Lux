@@ -34,18 +34,20 @@
             <div class="card-t-s">
               <div class="card-title">
                 <!-- Item.title -->
-                <p>item.title</p>
+                <p><%= item.title %></p>
               </div>
               <div class="card-stars">
                 <!-- Item.rating -->
-                <p>STARS</p>
-                <p><i class="far fa-star"></i></p>
-                <p><%= item.rating %></p>
+                <p>
+                  <% item.rating.times do %>
+                    <i class="far fa-star"></i>
+                  <% end %>
+                </p>
               </div>
             </div>
             <div class="card-description">
               <!-- Item.description -->
-              <h5>item.description</h5>
+              <h5><%= item.description %></h5>
             </div>
           </div>
         </div>

@@ -37,7 +37,9 @@
   right: 10px;
 }
 .card-description {
-
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 .card-description h2 {

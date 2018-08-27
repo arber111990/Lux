@@ -23,7 +23,7 @@ chris = User.new(email: "ChristianBell@bell.com", password: "123123")
 chris.save
 nick = User.new(email: "Nick@bogdanoff.com", password: "dompeet")
 nick.save
-nick_item = Item.new(user_id: nick.id, title: "Nicks Naughty Yacht", location: "Nicks oudoor swimming pool", description: "This is a naughty yacht. Some claim it is not a yacht at all, but a dinghy. Those people are incorrect.", price: 1000, rating: 1)
+nick_item = Item.new(user_id: nick.id, title: "Nicks Yacht", location: "Nicks oudoor swimming pool", description: "This is a yacht. Some claim it is not a yacht at all, but a dinghy. Those people are incorrect.", price: 1000, rating: 1)
 nick_item.save!
 
 puts 'Creating 20 fake restaurants...'
@@ -44,7 +44,7 @@ puts 'Creating 20 fake restaurants...'
     user_id: chris.id,
     item_id: item.id,
     title: "This is Crap!",
-    description: "Nick Johnson is scum who deserves death.",
+    description: "Can't say I enjoyed any of the entire experience.",
     rating: rand(1..5)
   )
 

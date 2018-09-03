@@ -39,7 +39,11 @@
             <div class="card-t-s">
               <div class="card-title">
                 <!-- Item.title -->
+                <div class="flex-container">
                 <p><%= item.title %></p>
+                <p> <%= humanized_money_with_symbol(item.price) %></p>
+                </div>
+
               </div>
               <div class="card-stars">
                 <!-- Item.rating -->

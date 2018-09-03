@@ -37,7 +37,8 @@ puts 'Creating 10 fake items...'
     description: "This is a really great item. Trust me I am Nick Johnson and I never lie.",
     price: rand(1000..2500),
     photo: image,
-    rating:  rand(0..5)
+    rating:  rand(0..5),
+    sku: adjectives.sample + " " + object
   )
   item.save!
   review = Review.new(

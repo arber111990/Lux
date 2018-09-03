@@ -40,8 +40,9 @@
       <div class="show-booking">
         <div class="show-booking-form">
           <div class="row">
-            <h2 class="show-booking-title">$<%= @item.price %> per day</h2>
-            <%= simple_form_for([@item, @booking])  do |f| %>
+            <h2 class="show-booking-title"><%= humanized_money_with_symbol(@item.price) %> per day</h2>
+            <%= simple_form_for([@item, @booking], :url => orders_path) do |f| %>
+              <%= hidden_field_tag 'item_id', @item.id %>
               <div class="col-xs-6 input-active">
                 <%= f.input :start_date, required: false %>
               </div>
@@ -61,10 +62,6 @@
             <h2>Your Booking</h2>
             <p>From: <%=  booking.start_date%>, to: <%=  booking.end_date%></p>
           <% end %>
-            <%= form_tag orders_path do %>
-            <%= hidden_field_tag 'item_id', @item.id %>
-            <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-            <% end %>
         </div>
       </div>
     </div>

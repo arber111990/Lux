@@ -26,8 +26,10 @@ nick.save
 nick_item = Item.new(user_id: nick.id, title: "Nicks Yacht", location: "Nicks oudoor swimming pool", description: "This is a yacht. Some claim it is not a yacht at all, but a dinghy. Those people are incorrect.", price: 1000, rating: 1)
 nick_item.save!
 
-puts 'Creating 20 fake restaurants...'
+
+puts 'Creating 20 fake items...'
 20.times do
+
   object = vehicles.sample
   image = images[object]
   item = Item.new(
@@ -36,7 +38,10 @@ puts 'Creating 20 fake restaurants...'
     location: "#{Faker::Address.city}",
     description: "This is a really great item. Trust me I am Nick Johnson and I never lie.",
     price: rand(1000..2500),
-    rating:  rand(0..5)
+
+    photo: image,
+    rating:  rand(0..5),
+    sku: adjectives.sample + " " + object
   )
   item.remote_photo_url = image
   item.save!

@@ -1,3 +1,6 @@
+<p> <%= humanized_money_with_symbol(@item.price) %></p>
+
+
 <div class="banner banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @item.profile %>');">
 </div>
 <div class="container">
@@ -37,8 +40,9 @@
       <div class="show-booking">
         <div class="show-booking-form">
           <div class="row">
-            <h2 class="show-booking-title">$<%= @item.price %> per day</h2>
-            <%= simple_form_for([@item, @booking])  do |f| %>
+            <h2 class="show-booking-title"><%= humanized_money_with_symbol(@item.price) %> per day</h2>
+            <%= simple_form_for([@item, @booking]) do |f| %>
+              <%= hidden_field_tag 'item_id', @item.id %>
               <div class="col-xs-6 input-active">
                 <%= f.input :start_date, required: false %>
               </div>

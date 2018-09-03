@@ -43,3 +43,12 @@
 .space {
   height: 50px;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  p {
+    font-size: 17px;
+  }
+}

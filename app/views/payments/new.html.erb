@@ -1,8 +1,8 @@
-<h1>Purchase of item <%= @order.item_sku %></h1>
-<%= form_tag order_payments_path(@order) do %>
+<h1>Purchase of item <%= @booking.item_sku %></h1>
+<%= form_tag item_booking_payments_path(@booking) do %>
   <article>
     <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
+      <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
     </label>
   </article>
 
@@ -11,7 +11,7 @@
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
     data-name="My Luxury Item"
     data-email="<%= current_user.email %>"
-    data-description="Item <%= @order.id %>"
-    data-amount="<%= @order.amount_cents %>"
-    data-currency="<%= @order.amount.currency %>"></script>
+    data-description="Item <%= @booking.id %>"
+    data-amount="<%= @booking.amount_cents %>"
+    data-currency="<%= @booking.amount.currency %>"></script>
 <% end %>

@@ -41,7 +41,7 @@
         <div class="show-booking-form">
           <div class="row">
             <h2 class="show-booking-title"><%= humanized_money_with_symbol(@item.price) %> per day</h2>
-            <%= simple_form_for([@item, @booking], :url => orders_path) do |f| %>
+            <%= simple_form_for([@item, @booking]) do |f| %>
               <%= hidden_field_tag 'item_id', @item.id %>
               <div class="col-xs-6 input-active">
                 <%= f.input :start_date, required: false %>

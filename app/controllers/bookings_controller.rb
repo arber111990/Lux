@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+
     @user = current_user
     @item = Item.find(params[:item_id])
     booking_params[:days] = booking_params[:days].to_i
@@ -12,9 +13,10 @@ class BookingsController < ApplicationController
     @booking.confirmed = false
     @booking.user_id = @user.id
     @booking.item_id = @item.id
-    @booking.price = @booking.days * @item.price
+    @booking.amount = @booking.days * @item.price
     @booking.save
-    redirect_to item_path(@item)
+
+    redirect_to new_item_booking_payment_path(@item, @booking)
   end
 
   def show

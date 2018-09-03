@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 2018_09_03_125816) do
     t.boolean "confirmed"
     t.integer "price"
     t.string "expired"
+    t.string "state"
+    t.string "item_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.jsonb "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_bookings_on_item_id"
@@ -43,17 +47,6 @@ ActiveRecord::Schema.define(version: 2018_09_03_125816) do
     t.integer "price_cents", default: 0, null: false
     t.string "sku"
     t.index ["user_id"], name: "index_items_on_user_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.string "state"
-    t.string "item_sku"
-    t.integer "amount_cents", default: 0, null: false
-    t.jsonb "payment"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -85,7 +78,6 @@ ActiveRecord::Schema.define(version: 2018_09_03_125816) do
   add_foreign_key "bookings", "items"
   add_foreign_key "bookings", "users"
   add_foreign_key "items", "users"
-  add_foreign_key "orders", "users"
   add_foreign_key "reviews", "items"
   add_foreign_key "reviews", "users"
 end

@@ -5,4 +5,7 @@ class Booking < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
   validates :days, presence: true
+
+  monetize :amount_cents
+
 end

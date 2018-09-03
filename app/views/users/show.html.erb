@@ -1,3 +1,6 @@
+<% current_user.bookings.each do |booking| %>
+<p><%= booking.item.title %> <%= booking.state %></p>
+<% end %>
 <% @user.items.each do |item| %>
   <%= item.title %>
   <% item.bookings.each do |booking| %>

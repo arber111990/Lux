@@ -10,6 +10,8 @@ class BookingsController < ApplicationController
     @item = Item.find(params[:item_id])
     booking_params[:days] = booking_params[:days].to_i
     @booking = Booking.new(booking_params)
+    number_of_days = (Date.iso8601(@booking.end_date) - Date.iso8601(@booking.start_date)).to_i
+    @booking.days = number_of_days
     @booking.confirmed = false
     @booking.user_id = @user.id
     @booking.item_id = @item.id

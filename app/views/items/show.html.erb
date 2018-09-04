@@ -41,17 +41,15 @@
         <div class="show-booking-form">
           <div class="row">
             <h2 class="show-booking-title"><%= humanized_money_with_symbol(@item.price) %> per day</h2>
+
             <%= simple_form_for([@item, @booking]) do |f| %>
               <%= hidden_field_tag 'item_id', @item.id %>
               <div class="col-xs-6 input-active">
-                <%= f.input :start_date, required: false %>
+                <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
               </div>
 
               <div class="col-xs-6 input-active">
-                <%= f.input :end_date, required: false %>
-              </div>
-              <div class="col-xs-12 input-active">
-                <%= f.input :days, required: false, :collection => (1..10).to_a,  placeholder: "Number of days", html: { class: "show-booking-inline" } %>
+                <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
               </div>
               <%= f.button :submit, :class => "item-show-button" %>
             <% end %>

@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :bookings, dependent: :destroy
   has_many :orders, dependent: :destroy
+  mount_uploader :photo, PhotoUploader
 end

@@ -2,8 +2,8 @@
 
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%), url(<%= image_path 'Yacht_porto.jpeg'%>);">
   <div class="banner-content">
-    <h1>Explore our select offerings below</h1>
-    <p>Lease luxury vehicles</p>
+    <h2>Lease luxury items</h2>
+    <p></p>
 
 
 
@@ -19,8 +19,6 @@
       <i class="fas fa-search"></i>
     </div>
   </div>
-
-
 </div>
 
 
@@ -62,8 +60,15 @@
               <!-- Item.description -->
               <p><%= item.description %></p>
             </div>
+              <!-- Avatar -->
 
           </div>
+          <% if item.user.photo_url == nil %>
+            <%= cl_image_tag 'lftrsymqmz4mqvtbr01e', class: "card-user" %>
+          <% else %>
+            <%= cl_image_tag item.user.photo.url(:bright_face), class: "card-user" %>
+          <% end %>
+          <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
         </div>
         <% end %>
       </div>

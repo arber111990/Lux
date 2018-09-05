@@ -1,14 +1,14 @@
-<p> <%= humanized_money_with_symbol(@item.price) %></p>
 
 
 <div class="banner banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @item.profile %>');">
 </div>
 <div class="container">
   <div class="show-box">
+    <%= cl_image_tag @item.user.photo, class: 'medium-avatar' %>
     <div class="show-left">
       <div class="show-title">
-        <h1> <%= @item.title %> </h1>
-        <h5>  City: London </h5>
+        <h1><%= @item.title %></h1>
+        <h5><%= @item.location %></h5>
 
         <p><%= @item.description %></p>
       </div>

@@ -19,9 +19,9 @@ User.destroy_all
 Item.destroy_all
 Review.destroy_all
 puts "Making the users and an item..."
-chris = User.new(email: "ChristianBell@bell.com", password: "123123")
+chris = User.new(email: "ChristianBell@bell.com", password: "123123", first_name: 'Christian', last_name: 'Bell')
 chris.save
-nick = User.new(email: "Nick@bogdanoff.com", password: "dompeet")
+nick = User.new(email: "Nick@bogdanoff.com", password: "dompeet", first_name: 'Nick', last_name: 'Bogdanoff')
 nick.save
 nick_item = Item.new(user_id: nick.id, title: "Nicks Yacht", location: "Nicks oudoor swimming pool", description: "This is a yacht. Some claim it is not a yacht at all, but a dinghy. Those people are incorrect.", price: 1000, rating: 1)
 nick_item.save!

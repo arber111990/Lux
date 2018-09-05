@@ -8,10 +8,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
-  color: #E2E2E2
+  color: #E2E2E2;
+  min-width: 100%;
 }
 
 
@@ -38,6 +39,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: -7%;
+
 }
 
 /* Basic navbar item */

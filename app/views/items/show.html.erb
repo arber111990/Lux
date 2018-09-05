@@ -5,10 +5,11 @@
 </div>
 <div class="container">
   <div class="show-box">
+    <%= cl_image_tag @item.user.photo %>
     <div class="show-left">
       <div class="show-title">
-        <h1> <%= @item.title %> </h1>
-        <h5>  City: London </h5>
+        <h1><%= @item.title %></h1>
+        <h5><%= @item.location %></h5>
 
         <p><%= @item.description %></p>
       </div>

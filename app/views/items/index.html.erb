@@ -31,7 +31,9 @@
        <%= link_to item_path(item.id) do %>
         <div class="card">
           <div class="card-image" style="height: 180px; width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path item.profile %>');">
+            <p><%= item.user.first_name %> <%= item.user.last_name %></p>
           </div>
+
 
           <div class="card-footer">
             <div class="card-t-s">

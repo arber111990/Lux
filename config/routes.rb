@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     end
     resources :reviews, only: [:new, :create, :show, :destroy]
   end
+
+  get '/settings', to: 'users#edit'
 end

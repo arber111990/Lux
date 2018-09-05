@@ -64,7 +64,8 @@
 
           </div>
           <% if item.user.photo_url == nil %>
-            <%= cl_image_tag 'lftrsymqmz4mqvtbr01e', class: "card-user" %>
+            <%= cl_image_tag 'lftrsymqmz4mqvtbr01e', effect: "brightness:30", radius: 20,
+      width: 200, height: 200, crop: :thumb, gravity: :face, class: "card-user" %>
           <% else %>
             <%= cl_image_tag item.user.photo.url(:bright_face), class: "card-user" %>
           <% end %>
@@ -76,3 +77,10 @@
   </div>
   <div class="space"></div>
 </div>
+
+<script>
+  document.querySelectorAll(".card-user").forEach(function(avatar){
+    avatar.setAttribute("width", "40");
+    avatar.setAttribute("height", "40");
+  });
+</script>

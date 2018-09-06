@@ -9,13 +9,20 @@
 }
 
 .card:hover {
-  background-color: black;
-  opacity: 0.8;
+  // background-color: black;
+  opacity: 0.9;
+  box-shadow: 1px 2px 4px #e5e5e5;
 }
-.card-user {
+.card-user-container {
   position: absolute;
   left: 10px;
   top: 10px;
+  p {
+    font-size: 14px;
+    margin: 0 0 0 10px;
+  }
+}
+.card-user {
   width: 40px;
   border-radius: 50%;
 }

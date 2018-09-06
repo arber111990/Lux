@@ -18,7 +18,7 @@
         <% if @item.reviews %>
           <% @item.reviews.each do |review| %>
             <div class="review_item">
-              <img src="http://kitt.lewagon.com/placeholder/users/ssaunier" alt="img" class="review_avatar">
+              <%= cl_image_tag review.user.photo, class: 'small-avatar' %>
               <h4><%= review.title %></h4>
             </div>
             <div class="review-content">

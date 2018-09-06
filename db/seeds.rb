@@ -155,8 +155,8 @@ user_9.save!
 user_10 = User.new(
   email: 'Warren.Buffet@gmail.com',
   password: '123123',
-  first_name: 'Jorge ',
-  last_name: 'Lorenzo',
+  first_name: 'Warren',
+  last_name: 'Buffet',
   bio: '',
   admin: false
 )
@@ -297,7 +297,7 @@ item_2 = Item.new(
   price_cents: 1000000,
   sku: 'Yamaha',
   location: 'London',
-  rating: 5
+  rating: 4
 )
 item_2.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536235101/Yamaha_of_Valentino.jpg'
 item_2.user = user_2
@@ -310,7 +310,7 @@ item_3 = Item.new(
   price_cents: 1000000,
   sku: 'ducati',
   location: 'London',
-  rating: 5
+  rating: 4
 )
 item_3.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536235090/Lorenzo_Ducati_GP17.jpg'
 item_3.user = user_3
@@ -323,7 +323,7 @@ item_4 = Item.new(
   price_cents: 1000000,
   sku: 'Bugatti',
   location: 'London',
-  rating: 5
+  rating: 1
 )
 item_4.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536235143/Lego_Bugatti_Chiron-1.png'
 item_4.user = user_4
@@ -349,7 +349,7 @@ item_6 = Item.new(
   price_cents: 1000000,
   sku: 'Lamborgini',
   location: 'London',
-  rating: 5
+  rating: 4
 )
 item_6.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536235196/CR7.jpg'
 item_6.user = user_6
@@ -388,7 +388,7 @@ item_9 = Item.new(
   price_cents: 1000000,
   sku: 'Jet',
   location: 'London',
-  rating: 5
+  rating: 3
 )
 item_9.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536235220/Buffet_Georgia-Jet20-700x450.jpg'
 item_9.user = user_9
@@ -442,7 +442,7 @@ item_13 = Item.new(
   location: 'London',
   rating: 5
 )
-item_13.remote_photo_url = ' '
+item_13.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536235264/Gates_pacificmariner2.jpg'
 item_13.user = user_13
 item_13.save
 

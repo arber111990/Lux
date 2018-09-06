@@ -50,7 +50,6 @@
 # end
 # puts 'Finished!'
 
-Order.destroy_all
 # USERS
 User.destroy_all
 user_1 = User.new(

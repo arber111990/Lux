@@ -50,7 +50,7 @@
 # end
 # puts 'Finished!'
 
-
+Order.destroy_all
 # USERS
 User.destroy_all
 user_1 = User.new(
@@ -280,8 +280,8 @@ Item.destroy_all
 item_1 = Item.new(
   title: 'Ducati Desmosedici',
   description: 'Ducati Desmosedici is four-stroke V4 engine racing motorcycle made by Ducati for MotoGP racing. The series nomenclature is GP with the two-digit year appended, such as Desmosedici GP9 for 2009. In 2006 Ducati made a short production run of 1,500 street-legal variants, the Desmosedici RR.',
-  price: 1000,
-  price_cents: 1000000,
+  price: 200,
+  price_cents: 20000,
   sku: 'ducati',
   location: 'London',
   rating: 5
@@ -293,8 +293,8 @@ item_1.save
 item_2 = Item.new(
   title: 'Yamaha YZR-M1',
   description: 'The Yamaha YZR-M1 is an inline-four motorcycle specifically developed by Yamaha Motor Company to race in the current MotoGP series.[1]',
-  price: 1000,
-  price_cents: 1000000,
+  price: 250,
+  price_cents: 25000,
   sku: 'Yamaha',
   location: 'London',
   rating: 4
@@ -306,8 +306,8 @@ item_2.save
 item_3 = Item.new(
   title: 'Ducati Desmosedici',
   description: 'Ducati Desmosedici is four-stroke V4 engine racing motorcycle made by Ducati for MotoGP racing. The series nomenclature is GP with the two-digit year appended, such as Desmosedici GP9 for 2009. In 2006 Ducati made a short production run of 1,500 street-legal variants, the Desmosedici RR.',
-  price: 1000,
-  price_cents: 1000000,
+  price: 200,
+  price_cents: 20000,
   sku: 'ducati',
   location: 'London',
   rating: 4
@@ -320,7 +320,7 @@ item_4 = Item.new(
   title: 'Bugatti Chiron',
   description: 'The CHIRON is the most powerful, fastest and exclusive production super sports car in BUGATTI sbrand history. The Chiron is an unique masterpiece of art.',
   price: 1000,
-  price_cents: 1000000,
+  price_cents: 100000,
   sku: 'Bugatti',
   location: 'London',
   rating: 1
@@ -332,8 +332,8 @@ item_4.save
 item_5 = Item.new(
   title: 'Lamborgini',
   description: 'The Lamborghini Murciélago is a sports car produced by Italian automotive manufacturer Lamborghini between 2001[7]and 2010.',
-  price: 1000,
-  price_cents: 1000000,
+  price: 550,
+  price_cents: 55000,
   sku: 'Lamborgini',
   location: 'London',
   rating: 5
@@ -345,8 +345,8 @@ item_5.save
 item_6 = Item.new(
   title: 'Lamborgini',
   description: 'The Lamborghini Murciélago is a sports car produced by Italian automotive manufacturer Lamborghini between 2001[7]and 2010.',
-  price: 1000,
-  price_cents: 1000000,
+  price: 600,
+  price_cents: 60000,
   sku: 'Lamborgini',
   location: 'London',
   rating: 4
@@ -358,11 +358,11 @@ item_6.save
 item_7 = Item.new(
   title: 'Lamborgini',
   description: 'The Lamborghini Gallardo (/ɡaɪˈjɑːrdoʊ/; Spanish: [ɡaˈʎaɾðo]) is a sports car built by the Italian automotive manufacturer Lamborghini from 2003 to 2013',
-  price: 1000,
-  price_cents: 1000000,
+  price: 550,
+  price_cents: 55000,
   sku: 'Lamborgini',
   location: 'London',
-  rating: 5
+  rating: 3
 )
 item_7.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536235187/Bieber_murcielago.jpg'
 item_7.user = user_7
@@ -371,8 +371,8 @@ item_7.save
 item_8 = Item.new(
   title: 'Lamborgini',
   description: 'The Lamborghini Gallardo (/ɡaɪˈjɑːrdoʊ/; Spanish: [ɡaˈʎaɾðo]) is a sports car built by the Italian automotive manufacturer Lamborghini from 2003 to 2013',
-  price: 1000,
-  price_cents: 1000000,
+  price: 600,
+  price_cents: 60000,
   sku: 'Lamborgini',
   location: 'London',
   rating: 5
@@ -384,8 +384,8 @@ item_8.save
 item_9 = Item.new(
   title: 'Jet',
   description: '',
-  price: 1000,
-  price_cents: 1000000,
+  price: 99400,
+  price_cents: 9940000,
   sku: 'Jet',
   location: 'London',
   rating: 3
@@ -397,8 +397,8 @@ item_9.save
 item_10 = Item.new(
   title: 'Yacht',
   description: 'Ducati Desmosedici is ',
-  price: 1000,
-  price_cents: 1000000,
+  price: 2000,
+  price_cents: 200000,
   sku: 'Yacht',
   location: 'London',
   rating: 5
@@ -410,8 +410,8 @@ item_10.save
 item_11 = Item.new(
   title: 'Yacht',
   description: 'Ducati Desmosedici is ',
-  price: 1000,
-  price_cents: 1000000,
+  price: 3500,
+  price_cents: 350000,
   sku: 'ducati',
   location: 'London',
   rating: 5
@@ -423,8 +423,8 @@ item_11.save
 item_12 = Item.new(
   title: 'Yacht',
   description: 'Ducati Desmosedici is ',
-  price: 1000,
-  price_cents: 1000000,
+  price: 1800,
+  price_cents: 180000,
   sku: 'Yacht',
   location: 'London',
   rating: 5
@@ -436,8 +436,8 @@ item_12.save
 item_13 = Item.new(
   title: 'Yacht',
   description: 'Ducati Desmosedici is ',
-  price: 1000,
-  price_cents: 1000000,
+  price: 4500,
+  price_cents: 450000,
   sku: 'Yacht',
   location: 'London',
   rating: 5
@@ -449,11 +449,11 @@ item_13.save
 item_14 = Item.new(
   title: 'Ducati Desmosedici',
   description: 'Ducati Desmosedici is ',
-  price: 1000,
-  price_cents: 1000000,
+  price: 300,
+  price_cents: 30000,
   sku: 'ducati',
   location: 'London',
-  rating: 5
+  rating: 3
 )
 item_14.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536230057/Bezos_Ducati_Desmosedici_RR_6.jpg'
 item_14.user = user_14
@@ -463,7 +463,7 @@ item_15 = Item.new(
   title: 'Ferrari F12',
   description: 'The Ferrari F12berlinetta[3] (also unofficially referred to as the F12 Berlinetta or the F12, and unofficially stylized as the F12B for short) is a front mid-engine, rear-wheel-drive grand tourer produced by Italian sports car manufacturer Ferrari. The F12 Berlinetta debuted at the 2012 Geneva Motor Show, and replaces the 599 grand tourer.[5]',
   price: 1000,
-  price_cents: 1000000,
+  price_cents: 110000,
   sku: 'Ferrari',
   location: 'London',
   rating: 5
@@ -475,8 +475,8 @@ item_15.save
 item_16 = Item.new(
   title: 'Ferrari Challenge',
   description: 'The Ferrari Challenge is a single-marque motorsport championship that was created in 1993 for owners of the 348 Berlinetta who wanted to become involved in racing. It now encompasses three official championships in the United States, Asia-Pacific, and Europe.[1] ',
-  price: 1000,
-  price_cents: 1000000,
+  price: 1150,
+  price_cents: 11500,
   sku: 'ducati',
   location: 'London',
   rating: 5
@@ -488,11 +488,11 @@ item_16.save
 item_17 = Item.new(
   title: 'Ferrari 458 Speciale',
   description: 'The Ferrari 458 Italia is a mid-engined sports car produced by the Italian sports car manufacturer Ferrari. The 458 replaced the Ferrari F430, and was first officially unveiled at the 2009 Frankfurt Motor Show.[4][5] It was replaced by the Ferrari 488, which was unveiled at the 2015 Geneva Motor Show.',
-  price: 1000,
-  price_cents: 1000000,
+  price: 900,
+  price_cents: 90000,
   sku: 'ducati',
   location: 'London',
-  rating: 5
+  rating: 3
 )
 item_17.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536235318/Ronaldo_Ferrari_-_458-spider.jpg'
 item_17.user = user_17
@@ -501,8 +501,8 @@ item_17.save
 item_18 = Item.new(
   title: 'Ferrari SF70h',
   description: 'The Ferrari SF70H is a Formula One racing car designed and constructed by Scuderia Ferrari to compete during the 2017 Formula One season. The car was driven by Sebastian Vettel and Kimi Räikkönen.[3] It made its competitive début at the 2017 Australian Grand Prix, where it finished first and fourth in the hands of Vettel and Räikkönen respectively. It was the last car to feature sponsorship from Santander, their long-term sponsor since 2010.',
-  price: 1000,
-  price_cents: 1000000,
+  price: 2500,
+  price_cents: 250000,
   sku: 'ducati',
   location: 'London',
   rating: 5
@@ -514,8 +514,8 @@ item_18.save
 item_19 = Item.new(
   title: 'Ferrari Enzo',
   description: 'The Enzo Ferrari[7] (also unofficially referred to as the Ferrari Enzo) is a 12 cylinder mid-engine sports car named after the companys founder, Enzo Ferrari.',
-  price: 1000,
-  price_cents: 1000000,
+  price: 1330,
+  price_cents: 133000,
   sku: 'ducati',
   location: 'London',
   rating: 5
@@ -528,10 +528,10 @@ item_20 = Item.new(
   title: 'Ducati Desmosedici',
   description: 'Ducati Desmosedici is ',
   price: 1000,
-  price_cents: 1000000,
+  price_cents: 100000,
   sku: 'ducati',
   location: 'London',
-  rating: 5
+  rating: 4
 )
 item_20.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536230057/Bezos_Ducati_Desmosedici_RR_6.jpg'
 item_20.user = user_20

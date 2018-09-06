@@ -1,36 +1,30 @@
-<% current_user.bookings.each do |booking| %>
-<div class="card">
-  <p><%= booking.item.title %> <%= booking.state %></p>
+<div class="bg-dark user-dash">
 
-</div>
-<% end %>
+  <div class="container text-align">
+    <h1>My bookings</h1>
 
-<!-- <h1><%= @user.first_name %> <%= @user.last_name %></h1> -->
+  </div>
+  <div class="container">
+    <% current_user.bookings.each do |booking| %>
 
-<% @user.items.each do |item| %>
-  <%= item.title %>
-  <% item.bookings.each do |booking| %>
-    <%= booking.start_date %>
-    <%= booking.end_date %>
-    <% if @user.id == current_user.id %>
-      <h1>buttons here</h1>
+    <div class="product">
+      <div class='product-upvote'>
+        <div class="product-arrow"></div>
+        <div class='product-count'>95</div>
+      </div>
+      <%#= image_tag booking.item.profile, class: "product-image hidden-xs" %>
+      <div class='product-body'>
+        <h3><%= booking.item.title %></h3>
+        <p><%= booking.state %> | <%= booking.start_date %> to <%= booking.end_date %></p>
+      </div>
+      <ul class="list-inline product-controls hidden-sm hidden-xs">
+        <li><a href=""><i class="fa fa-heart"></i></a></li>
+        <li><a href=""><i class="fa fa-share"></i></a></li>
+        <li><a href=""><i class="fa fa-star"></i></a></li>
+      </ul>
+    </div>
     <% end %>
-  <% end %>
-<% end %>
 
-<div class="product">
-  <div class='product-upvote'>
-    <div class="product-arrow"></div>
-    <div class='product-count'>95</div>
   </div>
-  <img src="kudoz.jpg" alt="kudoz" class="product-image hidden-xs">
-  <div class='product-body'>
-    <h3>Kudoz</h3>
-    <p>Best job offers on your phone</p>
-  </div>
-  <ul class="list-inline product-controls hidden-sm hidden-xs">
-    <li><a href=""><i class="fa fa-heart"></i></a></li>
-    <li><a href=""><i class="fa fa-share"></i></a></li>
-    <li><a href=""><i class="fa fa-star"></i></a></li>
-  </ul>
+
 </div>

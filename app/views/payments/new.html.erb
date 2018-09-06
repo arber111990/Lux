@@ -1,51 +1,26 @@
-<h1>Payment of item <%= @booking.item_sku %></h1>
-<%= form_tag item_booking_payments_path(@booking) do %>
-  <article>
-    <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
-    </label>
-  </article>
+<div class="bg-dark">
+  <div class="container min-height-flex">
+    <div class="payment-box">
+      <h1>Payment of item <%= @booking.item_sku %></h1>
+      <%= form_tag item_booking_payments_path(@booking) do %>
+        <article>
+          <label class="amount">
+            <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
+          </label>
+        </article>
 
-# Commented for the lecture, remove comments.
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Luxury Item"
-    data-email="<%= current_user.email %>"
-    data-description="Item <%= @booking.id %>"
-    data-amount="<%= @booking.amount_cents %>"
-    data-currency="<%= @booking.amount.currency %>"></script>
-<% end %>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-name="My Luxury Item"
+          data-email="<%= current_user.email %>"
+          data-description="Item <%= @booking.id %>"
+          data-amount="<%= @booking.amount_cents %>"
+          data-currency="<%= @booking.amount.currency %>"></script>
+      <% end %>
 
 
-#cart
-<div class="container">
-    <div class="com-container">
-      <div class= "com-card">
-        <h3>Your Order</h3>
-        <div class="order-subheading">
-          <h4 class="">Your Commission: <%= @order.request.commission.title %></h4>
-          <p><%= @order.request.commission.description %></p>
-
-          <h4 class="">Your Artist: <%= "#{@order.request.user.first_name} #{@order.request.user.last_name}"%></h4>
-          <p><%= @order.request.description %></p>
-
-          <div class="order-btn">
-            <div>
-              <h4>Amount</h4>
-              <p><%= humanized_money_with_symbol(@order.amount) %></p>
-            </div>
-            <% @order.request_sku %>
-            <%= form_tag order_payments_path(@order) do %>
-              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                data-name="My Request"
-                data-email="<%= current_user.email %>"
-                data-description="Request <%= @order.request_sku %>"
-                data-amount="<%= @order.amount_cents %>"
-                data-currency="<%= @order.amount.currency %>"></script>
-            <% end %>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+
+</div>
+

@@ -369,7 +369,7 @@ item_7.save
 
 item_8 = Item.new(
   title: 'Lamborgini',
-  description: 'The Lamborghini Gallardo (/ɡaɪˈjɑːrdoʊ/; Spanish: [ɡaˈʎaɾðo]) is a sports car built by the Italian automotive manufacturer Lamborghini from 2003 to 2013',
+  description: 'The Lamborghini Gallardo (/ɡaɪjɑːrdoʊ/; Spanish: [ɡaˈʎaɾðo]) is a sports car built by the Italian automotive manufacturer Lamborghini from 2003 to 2013',
   price: 600,
   price_cents: 60000,
   sku: 'Lamborgini',

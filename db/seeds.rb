@@ -185,7 +185,7 @@ user_12 = User.new(
 user_12.remote_photo_url = 'https://res.cloudinary.com/arb/image/upload/v1536232342/Giorgi_Armani.jpg'
 user_12.save!
 
-user_12 = User.new(
+user_13 = User.new(
   email: 'Bill.Gates@gmail.com',
   password: '123123',
   first_name: 'Bill',

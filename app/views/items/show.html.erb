@@ -4,7 +4,9 @@
 </div>
 <div class="container">
   <div class="show-box">
-    <%= cl_image_tag @item.user.photo, class: 'medium-avatar' %>
+    <div class="image">
+      <%= cl_image_tag @item.user.photo, width:150, height: 150, crop: "thumb", gravity: "face",  class: "medium-avatar"%>
+    </div>
     <div class="show-left">
       <div class="show-title">
         <h1><%= @item.title %></h1>
@@ -18,11 +20,13 @@
         <% if @item.reviews %>
           <% @item.reviews.each do |review| %>
             <div class="review_item">
-              <%= cl_image_tag review.user.photo, class: 'small-avatar' %>
+              <%= cl_image_tag review.user.photo, crop: "thumb", gravity: "face", class: 'small-avatar' %>
               <h4><%= review.title %></h4>
             </div>
             <div class="review-content">
-              <p><%= review.description %></p>
+              <!-- <div class="tag" style="width:339.5px"> -->
+                <p><%= review.description %></p>
+              <!-- </div> -->
               <div class="stars">
                 <% (review.rating).times do |rating| %>
                 <i class="fas fa-star"><% rating  %></i>
